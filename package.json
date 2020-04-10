@@ -5,12 +5,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "babel-node ./src/index.js",
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s",
+    "dev": "babel-node ./src/server.js",
     "test": "jest",
-    "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js",
+    "build": "babel src -d dist",
     "lint": "eslint ./src/"
   },
   "dependencies": {
