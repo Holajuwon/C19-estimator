@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
   try {
     const data = fs.readFileSync(filePath, 'utf8');
-    res.type('application/text').send(data);
+    res.set({ 'Content-type': 'text/plain' }).send(data);
   } catch (e) {
     res.send('Error:', e.stack);
   }
