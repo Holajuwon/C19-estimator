@@ -18,9 +18,9 @@ export default (data, currentlyInfected) => {
   - severeCasesByRequestedTime);
   const casesForICUByRequestedTime = Math.floor(infectionsByRequestedTime * 0.05);
   const casesForVentilatorsByRequestedTime = Math.floor(infectionsByRequestedTime * 0.02);
-  const dollarsInFlight = Math.round(infectionsByRequestedTime
+  const dollarsInFlight = parseFloat((infectionsByRequestedTime
   * data.region.avgDailyIncomePopulation
-   * data.region.avgDailyIncomeInUSD * days).toFixed(2);
+   * data.region.avgDailyIncomeInUSD * days).toFixed(2));
 
   return {
     infectionsByRequestedTime,
