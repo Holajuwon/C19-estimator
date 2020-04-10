@@ -13,14 +13,24 @@ export default (data, currentlyInfected) => {
   }
 
   const infectionsByRequestedTime = currentlyInfected * 2 ** factor;
-  const severeCasesByRequestedTime = Math.trunc(infectionsByRequestedTime * 0.15);
-  const hospitalBedsByRequestedTime = Math.trunc(data.totalHospitalBeds * 0.35
-  - severeCasesByRequestedTime);
-  const casesForICUByRequestedTime = Math.trunc(infectionsByRequestedTime * 0.05);
-  const casesForVentilatorsByRequestedTime = Math.trunc(infectionsByRequestedTime * 0.02);
-  const dollarsInFlight = Math.trunc(infectionsByRequestedTime
-  * data.region.avgDailyIncomePopulation
-   * data.region.avgDailyIncomeInUSD * days);
+  const severeCasesByRequestedTime = Math.trunc(
+    infectionsByRequestedTime * 0.15
+  );
+  const hospitalBedsByRequestedTime = Math.trunc(
+    data.totalHospitalBeds * 0.35 - severeCasesByRequestedTime
+  );
+  const casesForICUByRequestedTime = Math.trunc(
+    0.05 * infectionsByRequestedTime
+  );
+  const casesForVentilatorsByRequestedTime = Math.trunc(
+    0.02 * infectionsByRequestedTime
+  );
+  const dollarsInFlight = Math.trunc(
+    (infectionsByRequestedTime
+      * data.region.avgDailyIncomePopulation
+      * data.region.avgDailyIncomeInUSD)
+      / days
+  );
 
   return {
     infectionsByRequestedTime,
