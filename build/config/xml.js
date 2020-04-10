@@ -16,3 +16,4 @@ const builder = new _xml2js.default.Builder({
 });
 var _default = builder;
 exports.default = _default;
+//# sourceMappingURL=xml.js.map

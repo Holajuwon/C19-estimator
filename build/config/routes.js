@@ -24,3 +24,4 @@ var _default = app => {
 };
 
 exports.default = _default;
+//# sourceMappingURL=routes.js.map

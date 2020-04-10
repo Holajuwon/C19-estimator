@@ -37,3 +37,4 @@ var _default = (data, currentlyInfected) => {
 };
 
 exports.default = _default;
+//# sourceMappingURL=estimate.js.map

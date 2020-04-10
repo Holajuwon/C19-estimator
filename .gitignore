@@ -106,3 +106,4 @@ dist
 # Local test file
 src/estimates/i.js
 yarn.lock
+build/

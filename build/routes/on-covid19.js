@@ -25,3 +25,4 @@ router.post('/xml', (req, res) => {
 });
 var _default = router;
 exports.default = _default;
+//# sourceMappingURL=on-covid19.js.map

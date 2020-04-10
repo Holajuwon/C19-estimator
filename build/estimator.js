@@ -19,3 +19,4 @@ const covid19ImpactEstimator = data => ({
 
 var _default = covid19ImpactEstimator;
 exports.default = _default;
+//# sourceMappingURL=estimator.js.map

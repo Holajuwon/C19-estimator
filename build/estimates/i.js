@@ -18,3 +18,4 @@ const res = (0, _estimator.default)({
   totalHospitalBeds: 1380614
 });
 console.log(res);
+//# sourceMappingURL=i.js.map

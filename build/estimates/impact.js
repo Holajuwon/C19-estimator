@@ -18,3 +18,4 @@ var _default = data => {
 };
 
 exports.default = _default;
+//# sourceMappingURL=impact.js.map
