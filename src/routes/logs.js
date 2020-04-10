@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 
   try {
     const data = fs.readFileSync(filePath, 'utf8');
-    res.send(data);
+    res.json(data);
   } catch (e) {
     res.send('Error:', e.stack);
   }
