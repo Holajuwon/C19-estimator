@@ -6,10 +6,10 @@ export default (data, currentlyInfected) => {
     factor = Math.floor(data.timeToElapse / 3);
   } else if (data.periodType === 'weeks') {
     days = data.timeToElapse * 7;
-    factor = Math.floor((days) / 3);
+    factor = Math.floor((data.timeToElapse * 7) / 3);
   } else if (data.periodType === 'months') {
     days = data.timeToElapse * 30;
-    factor = Math.floor((days) / 3);
+    factor = Math.floor((data.timeToElapse * 30) / 3);
   }
 
   const infectionsByRequestedTime = currentlyInfected * 2 ** factor;
