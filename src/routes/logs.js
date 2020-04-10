@@ -9,9 +9,9 @@ router.get('/', (req, res) => {
   try {
     let data = fs.readFileSync(filePath, 'utf8');
     data = data.split('\n');
-    res.json(data);
+    return res.json(data);
   } catch (e) {
-    res.send('Error:', e.stack);
+    return res.send('Error:', e.stack);
   }
 });
 
