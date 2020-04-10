@@ -14,7 +14,7 @@ export default (app) => {
   // middlewares
   app.use(cors());
   app.use(json());
-  app.use(morgan(':method\t\t:url\t\t:status\t\t:response-time\tms', { stream: logger }));
+  app.use(morgan('tiny', { stream: logger }));
   app.use(urlencoded({ extended: true }));
   app.use('/api/v1/on-covid-19', covid);
   app.use('/api/v1/on-covid-19/logs', log);
