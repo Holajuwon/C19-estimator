@@ -1,6 +1,6 @@
 import express from 'express';
 import covid19ImpactEstimator from '../estimator';
-import builder from '../config/xml';
+import builder from '../utils/xml';
 
 const router = express.Router();
 

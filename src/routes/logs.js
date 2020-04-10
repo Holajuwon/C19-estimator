@@ -5,7 +5,7 @@ import path from 'path';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const filePath = path.resolve('./src/config/logger.txt');
+  const filePath = path.resolve('./src/utils/logger.txt');
 
   try {
     const data = fs.readFileSync(filePath, 'utf8');

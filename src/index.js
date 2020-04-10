@@ -2,7 +2,7 @@ import express from 'express';
 
 const app = express();
 
-require('./config/routes').default(app);
+require('./utils/routes').default(app);
 
 const port = process.env.PORT || 5000;
 
