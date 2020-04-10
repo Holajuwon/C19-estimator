@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Local test file
-src/i.js
+src/estimates/i.js

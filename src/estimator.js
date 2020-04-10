@@ -1,5 +1,5 @@
-import impact from './impact';
-import severeImpact from './severeImpact';
+import impact from './estimates/impact';
+import severeImpact from './estimates/severeImpact';
 
 const covid19ImpactEstimator = (data) => ({
   data,
