@@ -7,8 +7,9 @@ const router = express.Router();
 router.get('/', (req, res) => {
   const filePath = path.resolve('./src/config/logger.txt');
   try {
-    const data = fs.readFileSync(filePath, 'utf8');
-    res.send(data);
+    let data = fs.readFileSync(filePath, 'utf8');
+    data = data.split('\n');
+    res.json(data);
   } catch (e) {
     res.send('Error:', e.stack);
   }
