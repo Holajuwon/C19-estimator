@@ -6,13 +6,13 @@ import path from 'path';
 import covid from '../routes/on-covid19';
 import log from '../routes/logs';
 
-const logger = fs.createWriteStream(path.join(__dirname, 'logger.txt'), {
+const logger = fs.createWriteStream(path.join(__dirname, '../logger.txt'), {
   flags: 'a'
 });
 
 export default (app) => {
   // middlewares
-  app.use(cors());
+  app.use(cors({ origin: true, credentials: true }));
   app.use(json());
   app.use(urlencoded({ extended: true }));
   app.use(morgan('tiny', { stream: logger }));

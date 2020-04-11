@@ -5,13 +5,13 @@ import path from 'path';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  const filePath = path.resolve('./src/utils/logger.txt');
+  const filePath = path.join(__dirname, '../logger.txt');
 
   try {
     const data = fs.readFileSync(filePath, 'utf8');
-    res.send(data);
+    res.send(data.toString('utf8'));
   } catch (e) {
-    res.send('Error:', e.stack);
+    res.send(e.stack);
   }
 });
 
