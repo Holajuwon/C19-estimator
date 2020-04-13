@@ -15,7 +15,11 @@ export default (app) => {
   app.use(cors({ origin: true, credentials: true }));
   app.use(json());
   app.use(urlencoded({ extended: true }));
-  app.use(morgan('tiny', { stream: logger }));
+  app.use(
+    morgan(':method \t :url \t :status \t 00:response-time[0]ms', {
+      stream: logger
+    })
+  );
   app.use('/api/v1/on-covid-19', covid);
   app.use('/api/v1/on-covid-19/logs', log);
 };
